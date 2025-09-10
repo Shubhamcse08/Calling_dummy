@@ -1,0 +1,134 @@
+.call-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background: linear-gradient(to bottom, #1a1a1a, #2d2d2d);
+  border-radius: 24px;
+  
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  width: 340px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+}
+
+.controls-top {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.icon-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 8px;
+  border-radius: 12px;
+}
+
+.icon-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+.icon-button.active {
+  background-color: rgba(33, 150, 243, 0.2);
+}
+
+.icon-button.active .icon-circle {
+  background-color: #2196F3;
+}
+
+.icon-circle {
+  width: 61px;
+  height: 57px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: #424242;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+  transition: all 0.2s ease;
+}
+
+.icon-button:hover .icon-circle {
+  background-color: #4CAF50;
+}
+
+.icon-button:nth-child(2):hover .icon-circle {
+  background-color: #FF5252;
+}
+
+.icon-button:nth-child(3):hover .icon-circle {
+  background-color: #2196F3;
+}
+
+.icon-button:nth-child(4):hover .icon-circle {
+  background-color: #FFC107;
+}
+
+.icon-img {
+  width: 24px;
+  height: 24px;
+  filter: invert(1);
+}
+
+.icon-label {
+  color: #f5f5f5;
+  font-size: 12px;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+.controls-bottom {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.end-call-button {
+  width: 135px;
+  height: 70px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: #FF5252;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.end-call-button:hover {
+  background-color: #F44336;
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(244, 67, 54, 0.4);
+}
+
+.end-call-icon {
+  width: 30px;
+  height: 30px;
+  filter: invert(1);
+}
+
+/* Animation for active states */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.icon-button.active .icon-circle {
+  animation: pulse 1.5s infinite;
+}
